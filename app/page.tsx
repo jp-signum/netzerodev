@@ -1,65 +1,103 @@
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="nz-screen">
+      <div className="nz-frame">
+        {/* TOP BAR / CHANNEL HEADER */}
+        <header className="nz-topbar">
+          <div className="nz-topbar-left">
+            <span className="nz-logo">NETZERODEV</span>
+            <span className="nz-topbar-label">CLIMATE · DATA · SYSTEMS</span>
+          </div>
+          <div className="nz-topbar-right">
+            <span className="nz-topbar-item">CH 01 · PRELAUNCH</span>
+            <span className="nz-topbar-item">STATUS: UNDER CONSTRUCTION</span>
+          </div>
+        </header>
+
+        {/* MIDDLE BAND */}
+        <div className="nz-band">
+          {/* LEFT: CHANNEL MENU */}
+          <aside className="nz-channel-pane">
+            <div className="nz-pane-title">CHANNEL SELECT</div>
+            <ul className="nz-channel-list">
+              <li className="nz-channel nz-channel--active">
+                <span className="nz-channel-code">01</span>
+                <span className="nz-channel-label">Env Data Workflows</span>
+                <span className="nz-channel-state">NOW TUNED</span>
+              </li>
+              <li className="nz-channel">
+                <span className="nz-channel-code">02</span>
+                <span className="nz-channel-label">Grid & Infrastructure</span>
+                <span className="nz-channel-state">QUEUED</span>
+              </li>
+              <li className="nz-channel">
+                <span className="nz-channel-code">03</span>
+                <span className="nz-channel-label">Open Climate Datasets</span>
+                <span className="nz-channel-state">PLANNED</span>
+              </li>
+              <li className="nz-channel">
+                <span className="nz-channel-code">04</span>
+                <span className="nz-channel-label">Courses & Labs</span>
+                <span className="nz-channel-state">OFFLINE</span>
+              </li>
+              <li className="nz-channel">
+                <span className="nz-channel-code">05</span>
+                <span className="nz-channel-label">Field Notes / Blog</span>
+                <span className="nz-channel-state">OFFLINE</span>
+              </li>
+            </ul>
+          </aside>
+
+          {/* RIGHT: CONTENT AREA */}
+          <section className="nz-main-pane">
+            <div className="nz-pane-title">SYSTEM STATUS · PREVIEW ONLY</div>
+
+            <div className="nz-main-block">
+              <div className="nz-main-label">CURRENT VIEW</div>
+              <h1 className="nz-main-heading">
+                Climate systems, open environmental data, and resilient
+                infrastructure.
+              </h1>
+              <p className="nz-main-copy">
+                This channel will become a learning and reference space for real
+                workflows, tools, and systems used to work with open
+                environmental data and climate-tech infrastructure.
+              </p>
+            </div>
+
+            <div className="nz-main-grid">
+              <div className="nz-main-card">
+                <div className="nz-main-card-label">COMING ONLINE</div>
+                <ul className="nz-main-list">
+                  <li>· Workflow breakdowns & pipelines</li>
+                  <li>· Open data & access patterns</li>
+                  <li>· Grid-aware and infra-aware builds</li>
+                  <li>· Hands-on labs and courses</li>
+                </ul>
+              </div>
+              <div className="nz-main-card">
+                <div className="nz-main-card-label">BUILD QUEUE</div>
+                <ul className="nz-main-list">
+                  <li>□ Learning center shell</li>
+                  <li>□ Course + module map</li>
+                  <li>□ Data + infra stack notes</li>
+                  <li>□ Public launch schedule</li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+        {/* BOTTOM TICKER */}
+        <footer className="nz-ticker">
+          <div className="nz-ticker-label">SYSTEM FEED</div>
+          <div className="nz-ticker-text">
+            LEARNING CENTER OFFLINE · BLOG OFFLINE · WORKFLOWS AND COURSES
+            QUEUED FOR BUILD · NETZERODEV IS RUNNING IN PRELAUNCH MODE ·
+          </div>
+        </footer>
+      </div>
+    </main>
   );
 }
