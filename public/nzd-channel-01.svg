@@ -1,0 +1,41 @@
+<svg
+  width="64"
+  height="64"
+  viewBox="0 0 64 64"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Background -->
+  <rect
+    x="2"
+    y="2"
+    width="60"
+    height="60"
+    rx="6"
+    fill="#01336b"
+    stroke="#335c8f"
+    stroke-width="2"
+  />
+
+  <!-- Inner band (slight panel feel) -->
+  <rect
+    x="6"
+    y="10"
+    width="52"
+    height="44"
+    rx="4"
+    fill="#02254a"
+  />
+
+  <!-- 01 text -->
+  <text
+    x="50%"
+    y="52%"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="24"
+    fill="#f9d76b"
+  >
+    01
+  </text>
+</svg>
